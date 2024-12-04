@@ -52,6 +52,6 @@ npm install
 
 
 ### Database
-you can see the table schema in "models" folder in backend diretory
-my Database name : test
-tables: expenses, users
+- you can see the table schema in "models" folder in backend diretory
+- my Database name : test
+- tables: expenses, users
