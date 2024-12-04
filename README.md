@@ -31,7 +31,7 @@ node server.js
 ```
 
 
-### Backend  
+### Frontend
 
 1. **Navigate to the frontend directory**:  
    Open your terminal and run the following command:
@@ -50,3 +50,8 @@ npm install
    npm start
    ```
 
+
+### Database
+you can see the table schema in "models" folder in backend diretory
+my Database name : test
+tables: expenses, users
