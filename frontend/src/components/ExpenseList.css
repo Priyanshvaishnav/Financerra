@@ -1,0 +1,31 @@
+.expense-list .filters {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.expense-list .filters input {
+  padding: 5px;
+  font-size: 14px;
+}
+
+.expense-list table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.expense-list th,
+.expense-list td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.expense-list th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.expense-list tr:hover {
+  background-color: #f1f1f1;
+}
