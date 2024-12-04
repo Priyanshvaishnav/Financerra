@@ -29,3 +29,24 @@ JWT_SECRET=<your-secret-key>
 ```bash
 node server.js
 ```
+
+
+### Backend  
+
+1. **Navigate to the frontend directory**:  
+   Open your terminal and run the following command:
+   ```bash
+   cd frontend
+   ```
+   
+2. **Install backend dependencies**:
+Run the command to install required dependencies:
+
+``` bash
+npm install
+```
+3. **Start the frontend development server**:
+   ``` bash
+   npm start
+   ```
+
