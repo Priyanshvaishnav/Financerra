@@ -1,0 +1,35 @@
+  GNU nano 7.2                                                                docker-compose.yml                                                                          version: '3.8'
+
+services:
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    networks:
+      - fin
+
+  backend:
+    build: ./backend
+    ports:
+      - "5000:5000"
+    networks:
+      - fin
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    networks:
+      - fin
+    volumes:
+      - mongo-data:/data/db
+
+networks:
+  fin:
+    driver: bridge
+
+volumes:
+  mongo-data:
+    driver: local
