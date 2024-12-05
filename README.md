@@ -130,6 +130,10 @@ Now the frontend, backend, and MongoDB containers should be running in the `fin`
 
 
 ## Web Interface
-![Financerra Logo](signupo.png)
+![Login Page](Financerra.png)
+![Register Page](signup.png)
+![Dashboard](dashboard.png)
+
+
 
 
