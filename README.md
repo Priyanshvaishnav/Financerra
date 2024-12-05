@@ -55,3 +55,67 @@ npm install
 - you can see the table schema in "models" folder in backend diretory
 - my Database name : test
 - tables: expenses, users
+
+
+
+# Financerra Application Setup
+
+Follow the steps below to build and run the frontend, backend, and MongoDB containers for the Financerra application.
+
+## Step 1: Setup Frontend
+
+1. **Navigate to the frontend directory**:
+    ```bash
+    cd frontend/
+    ```
+
+2. **Build the Docker image**:
+    ```bash
+    docker build -t financerra-fn .
+    ```
+
+3. **Create a Docker network** for the application:
+    ```bash
+    docker network create fin
+    ```
+    *(Note: "fin" is the name of the network for the Financerra application)*
+
+4. **Run the frontend container in the created network**:
+    ```bash
+    docker run --name=fn --network=fin -d -p 3000:3000 financerra-fn
+    ```
+
+## Step 2: Run MongoDB Container
+
+1. **Run the MongoDB container in the "fin" network** on local host port `27017`:
+    ```bash
+    docker run --name mongodb --network fin -p 27017:27017 -v ~/opt/data:/data/db -d mongo:latest
+    ```
+
+## Step 3: Setup Backend
+
+1. **Navigate to the backend directory**:
+    ```bash
+    cd ../backend/
+    ```
+
+2. **Build the backend Docker image**:
+    ```bash
+    docker build -t financerra-bn .
+    ```
+
+3. **Run the backend container in the "fin" network**:
+    ```bash
+    docker run --name=bn --network=fin -d -p 5000:5000 financerra-bn
+    ```
+
+---
+
+## That's It!
+
+Now the frontend, backend, and MongoDB containers should be running in the `fin` network and accessible via the following ports:
+
+- **Frontend**: [http://localhost:3000](http://localhost:3000)
+- **Backend**: [http://localhost:5000](http://localhost:5000)
+- **MongoDB**: Accessible internally at port `27017` on the `fin` network.
+
