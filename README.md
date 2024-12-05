@@ -1,5 +1,5 @@
 # MintTrail
-A Expense Tracker Web Application (MERN Stack).   Fresh and on track with your money
+A Expense Tracker Web Application (MERN Stack).   Fresh and on track with your money.
 
 ## Setup  
 
