@@ -111,6 +111,13 @@ Follow the steps below to build and run the frontend, backend, and MongoDB conta
 
 ---
 
+
+## For running docker-compose.yml file 
+use Command
+```bash
+docker-compose up -d build
+```
+It will start mmanaging the containers. (May be have to change the names of volumns, etc...)
 ## That's It!
 
 Now the frontend, backend, and MongoDB containers should be running in the `fin` network and accessible via the following ports:
